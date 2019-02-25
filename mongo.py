@@ -24,10 +24,10 @@ mylist = [
   { "name": "Viola", "address": "Sideway 1633"}
 ]
 
-#x = mycol.insert_many(mylist)
+x = mycol.insert_many(mylist)
 
 #print list of the _id values of the inserted documents:
-#print(x.inserted_ids)
+print(x.inserted_ids)
 
 mylist = [
   { "_id": 1, "name": "John", "address": "Highway 37"},
@@ -74,9 +74,9 @@ mydoc = mycol.find().sort("name")
 
 for x in mydoc:
   print(x)
-mycol = mydb["customers"]
+"""mycol = mydb["customers"]
 
-mycol.drop()
+mycol.drop()"""
 myquery = { "address": "Valley 345" }
 newvalues = { "$set": { "address": "Canyon 123" } }
 
